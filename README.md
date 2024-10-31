@@ -16,6 +16,10 @@
 7. Styling 
 8. Server Side Rendering
 9. Static Site Generation
+10. React server component 
+11. server component -> next js all components are server components by default 
+12. client component 
+
 
 
 ## Project Setup 🧑‍💻
@@ -94,10 +98,31 @@
  > 3. layout.tsx -> shared across diff. pages
  > 4. page.tsx ->unique ui that show on visiting   this is children props in the layout.tsx to form a complete ui
  
- 
+#
+## 8 . Server components 
 
-  
+* next js all components are server components by default
+* we don't have capabilities to use hooks 
+* To create client components it is necessary to add "use client" at top of the components file 
+#
 
+## 9 . Routing 
+* Next js have file system  based routing mechanism
+* url path that can access in the browser
+
+### Routing convention 🚀
+* All Routes be placed inside the app folder 
+* Every file that corresponds to a route must be named page.jsx or page.tsx
+* Every folder to a path segment in the browser 
+
+###  Nested Routing
+![estedroutes ](myapp1/data/nestedroutes.png)
+
+
+### Dynamic Routing 
+![dynamic ](myapp1/data/dynamic.png)
+
+* we have to create folder using [id]
 
 ## Authors
 
