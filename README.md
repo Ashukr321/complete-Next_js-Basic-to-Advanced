@@ -124,6 +124,15 @@
 
 * we have to create folder using [id]
 
+### Nested Dynamic Routing
+
+### Catch all Segment 
+* [...slug]
+
+### Not Found Page 
+* to create not found page we have to create a page in app folder 
+* not-found.tsx 
+
 ## Authors
 
 - [@Ashutosh kumar](https://github.com/Ashukr321)
