@@ -133,6 +133,47 @@
 * to create not found page we have to create a page in app folder 
 * not-found.tsx 
 
+## File Co_location 
+## Private folder 
+* A private folder indicated that it is a private  implementation details and should not be considered  by the next js routing system🔥
+* to create private folder we have to use _ underscore to make it private 
+
+## Routes Group 🔥🔥 
+* Related Routes are grouped together
+* it allow us to logically group the routes without affecting the  url path structure 
+* For creating the routes group we have to use the ( ) all related routes are wrapped inside ()
+  
+examples: 
+
+      (auth)
+        >login
+          page.tsx
+        >register
+          page.tsx
+
+## layout 
+* share between multiple layouts 
+>
+    import React from 'react'
+
+    const layout = ({children}:{
+      children:React.ReactNode;
+    }) => {
+      return (
+        <div>
+          <h1>layout</h1>
+          <main>{children}</main>
+        </div>
+      )
+    }
+
+    export default layout
+
+## Nested layout 
+
+## Routes grouped layout
+
+
 ## Authors
 
 - [@Ashutosh kumar](https://github.com/Ashukr321)
