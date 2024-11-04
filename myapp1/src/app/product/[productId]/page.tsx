@@ -1,16 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { Metadata } from 'next';
 
-const page = ({params}:{
-  params:{
-    productId:string
-  }
-}) => {
+type Props = {
+  params: {
+    productId: string;
+  };
+};
 
+// Function to generate metadata for the page
+export const generateMetadata = ({ params }: Props): Metadata => {
+  return {
+    title: `Product ${params.productId}`,
+  };
+};
+
+// Main component for the page
+const Page = ({ params }: Props) => {
   return (
     <div>
-      <h1>product {params.productId} details</h1>
+      <h1>Product {params.productId} Details</h1>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

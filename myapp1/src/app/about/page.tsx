@@ -1,5 +1,8 @@
 import React from 'react'
-
+export const metadata = {
+  title:"about us page",
+  
+}
 const page = () => {
   return (
     <div className='bg-black h-screen flex justify-center items-center'>

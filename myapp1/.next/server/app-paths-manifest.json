@@ -1,8 +1,7 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/blog/page": "app/blog/page.js",
-  "/blog/first/page": "app/blog/first/page.js",
-  "/blog/second/page": "app/blog/second/page.js",
-  "/product/[productId]/page": "app/product/[productId]/page.js",
-  "/product/page": "app/product/page.js"
+  "/product/page": "app/product/page.js",
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/dashboard/(user)/phone/page": "app/dashboard/(user)/phone/page.js",
+  "/product/[productId]/page": "app/product/[productId]/page.js"
 }
