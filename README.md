@@ -239,7 +239,38 @@ examples:
     router.push('/');
 
 
-## Authors
+### ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ Nest Auth ⭐⭐⭐⭐⭐⭐⭐⭐⭐
+* NextAuth.js is an easy-to-implement open source authentication library originally designed for Nextjs and serverless. With NextAuth, you don’t necessarily have to create and use any database or any backend of any kind for authentication because it takes care of all that
+## Why use NextAuth.js?
+
+* It supports OAuth 1.0, 1.0A, 2.0, and OpenID Connect and is designed to work with any OAuth service.
+* Many popular sign-in services are already supported.
+* Email and passwordless authentication are supported.
+* Allows for stateless authentication with any backend (Active Directory, LDAP, etc.)
+* JSON Web Tokens and database sessions are both supported.
+* Designed for Serverless but runs anywhere (AWS Lambda, Docker, Heroku, and so on…).
+* An open-source solution that gives you control over your data *
+* MySQL, MariaDB, Postgres, SQL Server, MongoDB, and SQLite are all supported natively.
+* Excellent compatibility with popular hosting provider databases
+* It can be used without a database (for example, OAuth + JWT).
+* Secure by default
+
+
+## Quick reference 
+- [Next auth](https://next-auth.js.org/)
+- []()
+## 1 Project setup
+
+create next app 
+>
+    npx create-next-app@latest
+
+install next-auth 
+    npm install next-auth
+
+
+## 2 Syntax 
+
 
 - [@Ashutosh kumar](https://github.com/Ashukr321)
 
