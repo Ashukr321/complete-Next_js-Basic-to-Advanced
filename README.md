@@ -7,23 +7,45 @@
 
 
 ## Important Key Features of Next js 
-1. what is next js 
-2. libaraies or framework
-3. Routing 
-4. Api Routes 
-5. Rendering
-6. Data Fetching 
-7. Styling 
-8. Server Side Rendering
-9. Static Site Generation
-10. React server component 
-11. server component -> next js all components are server components by default 
-12. client component 
+1. Code Editor 
+2. Node js 
+3. Installation 
+4. folder structure
+5. Server components 
+6. Routing 
+7. Routing convention
+8. Nested Routing
+9. Dynamic Routing
+10. Nested Dynamic Routing
+11. Catch all Segment 
+12. Not Found Page
+13. File Co_location
+14. Private folder 
+15. Routes Group
+16. layout
+17. Nested layout 
+18. Routes grouped layout
+19. Routing MetaData
+20. title metadata
+21. Link component of Next js
+22. Active link 
+23. Navigating Programmatically
+24. Loading ui 
+25. Error Handling error.tsx 
+26. Recovering from Error
+27. Parallel Routes 
+28. conditional Routes 
+29.
+
+
+
+
+
 
 
 
 ## Project Setup 🧑‍💻
-### 1.Test Editor 
+### 1.Code Editor 
 ### 2.Node js 
 ### 3.Installation
 
@@ -110,35 +132,35 @@
 * Next js have file system  based routing mechanism
 * url path that can access in the browser
 
-### Routing convention 🚀
+### 10  Routing convention 🚀
 * All Routes be placed inside the app folder 
 * Every file that corresponds to a route must be named page.jsx or page.tsx
 * Every folder to a path segment in the browser 
 
-###  Nested Routing
+### 11 Nested Routing
 ![estedroutes ](myapp1/data/nestedroutes.png)
 
 
-### Dynamic Routing 
+### 12 Dynamic Routing 
 ![dynamic ](myapp1/data/dynamic.png)
 
 * we have to create folder using [id]
 
-### Nested Dynamic Routing
+### 13 Nested Dynamic Routing
 
-### Catch all Segment 
+### 14 Catch all Segment 
 * [...slug]
 
-### Not Found Page 
+### 15 Not Found Page 
 * to create not found page we have to create a page in app folder 
 * not-found.tsx 
 
-## File Co_location 
+## 16 File Co_location 
 ## Private folder 
 * A private folder indicated that it is a private  implementation details and should not be considered  by the next js routing system🔥
 * to create private folder we have to use _ underscore to make it private 
 
-## Routes Group 🔥🔥 
+## 17 Routes Group 🔥🔥 
 * Related Routes are grouped together
 * it allow us to logically group the routes without affecting the  url path structure 
 * For creating the routes group we have to use the ( ) all related routes are wrapped inside ()
@@ -151,7 +173,7 @@ examples:
         >register
           page.tsx
 
-## layout 
+## 18 layout 
 * share between multiple layouts 
 >
     import React from 'react'
@@ -169,11 +191,11 @@ examples:
 
     export default layout
 
-## Nested layout 
+## 19 Nested layout 
 
-## Routes grouped layout
+## 20 Routes grouped layout
 
-## Routing MetaData 
+## 21 Routing MetaData 
 * it is crucial for the seo and visibility 
 * Next js introduce  Metadata api  , it allow you to defined each page metaData 
 * it must have to export the metadata object 
@@ -212,7 +234,7 @@ examples:
     };
     export default Page;
 #
-## title metadata
+## 22 title metadata
 >
     export const metadata: Metadata = {
       title:{
@@ -224,56 +246,75 @@ examples:
     };
 
 
-## Link component of Next js 
+##  23 Link component of Next js 
 * Link is the react component that extends anchor tag html element
 
       <Link href={'/about'}>about</Link>
 
-## Active link 
+## 24 Active link 
 
-## Navigating Programmatically 
+## 25 Navigating Programmatically 
 >
     import { useRouter } from 'next/navigation'
 
     const router = useRouter();
     router.push('/');
+## 26 Loading ui 
+
+## 27 Error Handling 
+* ErrorBoundary component must be client component
+> 
+    "use client"
+    const ErrorBoundary = ({error}:{
+      error: Error
+    }) => {
+      return (
+        <div>
+          <h1>{error.message}</h1>
+        </div>
+      )
+    }
+
+    export default ErrorBoundary
 
 
-### ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ Nest Auth ⭐⭐⭐⭐⭐⭐⭐⭐⭐
-* NextAuth.js is an easy-to-implement open source authentication library originally designed for Nextjs and serverless. With NextAuth, you don’t necessarily have to create and use any database or any backend of any kind for authentication because it takes care of all that
-## Why use NextAuth.js?
+## 28 Recovering from Error 
 
-* It supports OAuth 1.0, 1.0A, 2.0, and OpenID Connect and is designed to work with any OAuth service.
-* Many popular sign-in services are already supported.
-* Email and passwordless authentication are supported.
-* Allows for stateless authentication with any backend (Active Directory, LDAP, etc.)
-* JSON Web Tokens and database sessions are both supported.
-* Designed for Serverless but runs anywhere (AWS Lambda, Docker, Heroku, and so on…).
-* An open-source solution that gives you control over your data *
-* MySQL, MariaDB, Postgres, SQL Server, MongoDB, and SQLite are all supported natively.
-* Excellent compatibility with popular hosting provider databases
-* It can be used without a database (for example, OAuth + JWT).
-* Secure by default
-
-
-## Quick reference 
-- [Next auth](https://next-auth.js.org/)
-- []()
-## 1 Project setup
-
-create next app 
->
-    npx create-next-app@latest
-
-install next-auth 
-    npm install next-auth
+    "use client"
+        const ErrorBoundary = ({error,reset}:{
+          error: Error,
+          reset: () =>void,
+        }) => {
+          return (
+            <div>
+              <h1>{error.message}</h1>
+              <button onClick=(reset)>Try Again</button>
+            </div>
+          )
+        }
+      export default ErrorBoundary
+* we also have to make page.tsx as client component
+* when we switch within the ui other slots is unaffected
 
 
-## 2 Syntax 
+
+
+## 29 Parallel Routes 
+Parallel routes are an advanced routing mechanism that allows for the simultaneous rendering of multiple pages within the same layout.
+
+
+* Use the @folder naming convention to define ⭐ slots ⭐ for your routes.
+* each slots is passes as a props to its corresponding layout.tsx file
+
+
+## Unmatched routes 
+* when page reload  next js immediately search for  default.tsx page with in each un match  slot
+* default.tsx not found then next js render 404 page 
+
+
 
 
 - [@Ashutosh kumar](https://github.com/Ashukr321)
-
 
 
 ## 🔗 Links
