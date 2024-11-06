@@ -35,7 +35,8 @@
 26. Recovering from Error
 27. Parallel Routes 
 28. conditional Routes 
-29.
+29. Route Handler 
+30. 
 
 
 
@@ -314,9 +315,19 @@ Parallel routes are an advanced routing mechanism that allows for the simultaneo
 
 
 
+
+
+## Route Handler 
+* Route handler allow us to create restFull endpoints
+* we can perform crud operations to the database similar to the node express 
+* it helpFull to making external api requests
+* to create routes handler we have to follow 
+* route.ts
+
+
+
+
 - [@Ashutosh kumar](https://github.com/Ashukr321)
-
-
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://modern-portfolio-phi-rouge.vercel.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ashutosh-kumar-7ba1a6211/)
