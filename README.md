@@ -33,6 +33,8 @@
 24. Loading ui 
 25. Error Handling error.tsx 
 26. Recovering from Error
+27. Parallel Routes 
+
 
 
 
@@ -290,12 +292,27 @@ examples:
         }
       export default ErrorBoundary
 * we also have to make page.tsx as client component
+* when we switch within the ui other slots is unaffected
+
+
+
+
+## 29 Parallel Routes 
+Parallel routes are an advanced routing mechanism that allows for the simultaneous rendering of multiple pages within the same layout.
+
+
+* Use the @folder naming convention to define ⭐ slots ⭐ for your routes.
+* each slots is passes as a props to its corresponding layout.tsx file
+
+
+## Unmatched routes 
+* when page reload  next js immediately search for  default.tsx page with in each un match  slot
+* default.tsx not found then next js render 404 page 
 
 
 
 
 - [@Ashutosh kumar](https://github.com/Ashukr321)
-
 
 
 ## 🔗 Links

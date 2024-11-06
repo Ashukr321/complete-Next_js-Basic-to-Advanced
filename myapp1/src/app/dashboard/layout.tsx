@@ -1,12 +1,27 @@
-import React from 'react'
 
-const layout = ({children}:{
-  children:React.ReactNode;
+const layout = ({children,team,user,notification}:{
+  children:React.ReactNode,
+  team:React.ReactNode,
+  user:React.ReactNode,
+  notification:React.ReactNode
 }) => {
   return (
     <div>
-      <h1>layout</h1>
-      <main>{children}</main>
+      <main>
+       {children}
+      </main>
+      <div>
+        {team}
+      </div>
+      
+      <div>
+        {user}
+      </div>
+
+      <div>
+        {notification}
+      </div>
+
     </div>
   )
 }

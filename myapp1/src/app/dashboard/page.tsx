@@ -1,10 +1,9 @@
 import React from 'react'
-// import Line from './Line'
+
 const page = () => {
   return (
     <div>
-        {/* <Line/> */}
-      dashboard
+      <h1>team</h1>
     </div>
   )
 }
