@@ -36,7 +36,9 @@
 27. Parallel Routes 
 28. conditional Routes 
 29. Route Handler 
-30. 
+30. Handling Get Request
+31. Handling Post Requests
+
 
 
 
