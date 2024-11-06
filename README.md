@@ -34,6 +34,8 @@
 25. Error Handling error.tsx 
 26. Recovering from Error
 27. Parallel Routes 
+28. conditional Routes 
+29.
 
 
 

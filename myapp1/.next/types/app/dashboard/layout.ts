@@ -57,6 +57,7 @@ export interface PageProps {
 }
 export interface LayoutProps {
   children?: React.ReactNode
+  login: React.ReactNode
   notification: React.ReactNode
   team: React.ReactNode
   user: React.ReactNode

@@ -1,11 +1,13 @@
 
-const layout = ({children,team,user,notification}:{
+const layout = ({children,team,user,notification,login}:{
   children:React.ReactNode,
   team:React.ReactNode,
   user:React.ReactNode,
-  notification:React.ReactNode
+  notification:React.ReactNode,
+  login:React.ReactNode,
 }) => {
-  return (
+  const isLogined = true;
+  return isLogined?  (
     <div>
       <main>
        {children}
@@ -23,6 +25,10 @@ const layout = ({children,team,user,notification}:{
       </div>
 
     </div>
+  ):(
+    <>
+    <h1>{login}</h1>
+    </>
   )
 }
 
