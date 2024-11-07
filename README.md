@@ -38,8 +38,9 @@
 29. Route Handler 
 30. Handling Get Request
 31. Handling Post Requests
-32. Dynamic Routes 
-33. Patch Request
+32. Dynamic Routes Route handler
+33. Patch Request Route handler
+34. Delete Request Route handler
 
 
 
