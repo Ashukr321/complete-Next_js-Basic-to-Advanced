@@ -50,3 +50,20 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     return new Response(JSON.stringify({ error: "An unknown error occurred" }), { status: 500 });
   }
 }
+
+export function DELETE(request:Request,{params}:{params:{id:string}}){
+  try {
+    
+  
+  const index= comments.findIndex((comment)=>{
+    return comment.id==parseInt(params.id);
+  })
+  if(index==-1){
+    return new Response(JSON.stringify({error:"Comment not found"}),{status:404})
+  }
+  const deletedComment = comments.splice(index,1);
+  return new Response(JSON.stringify( deletedComment));
+ }catch (error) {
+    return new Response(JSON.stringify(error.message));
+  }
+}
