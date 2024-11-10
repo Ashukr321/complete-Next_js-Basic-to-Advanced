@@ -1,8 +1,9 @@
+import { NextRequest } from "next/server";
 import { comments } from "./data";
 
-export function GET(){
-  return  Response.json(comments);
-}
+// export function GET(){
+//   return  Response.json(comments);
+// }
 
 export async function POST(request:Request){
   
@@ -16,4 +17,13 @@ export async function POST(request:Request){
   comments.push(newComment);
   return new Response(JSON.stringify(comment));
   
+}
+
+export function GET(request:NextRequest){
+  const searchParams = request.nextUrl.searchParams;
+  const query = searchParams.get('query');
+  const filterComment = query ? comments.filter((comment)=>{
+    return comment.text.includes(query)
+  }):comments;
+  return new Response(JSON.stringify(filterComment));
 }

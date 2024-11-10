@@ -1,14 +1,22 @@
+import { permanentRedirect } from 'next/navigation'
 import { comments } from "../data"
 
 
-export function GET(request:Request,{params}:{params:{id:string}}){
+export  async function GET(request:Request,{params}:{params:{id:string}}){
   try {
     const comment= comments.find((comment)=>{
       return comment.id== parseInt(params.id);
     })
+    
+    if(parseInt(params.id)>comments.length){
+       permanentRedirect(`/comments`)
+    }
+    
     if(comment==null){
       throw new  Error("Comment not found");
     }
+   
+    
     return new Response(JSON.stringify(comment));
   } catch (error:string|any) {
     return new Response(JSON.stringify(error.message));
@@ -51,7 +59,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
   }
 }
 
-export function DELETE(request:Request,{params}:{params:{id:string}}){
+export async function DELETE(request:Request,{params}:{params:{id:string}}){
   try {
     
   

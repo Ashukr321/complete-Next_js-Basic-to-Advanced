@@ -41,6 +41,13 @@
 32. Dynamic Routes Route handler
 33. Patch Request Route handler
 34. Delete Request Route handler
+35. URL query parameters
+36. Redirect in Routes Handler 
+37. Header in Routes Handler 
+38. Cookies in Routes Handler
+
+
+
 
 
 
@@ -329,6 +336,33 @@ Parallel routes are an advanced routing mechanism that allows for the simultaneo
 * it helpFull to making external api requests
 * to create routes handler we have to follow 
 * route.ts
+
+
+## headers in Route Handler
+* headers represent the metadata associated with an api  request and response
+* two types 
+### Request header 
+* Request header are send by the client such as web browser
+* This contains essential information about request example : Authorization, user agent ,Accept
+
+### Response header
+* these are send back from the server to the client 
+## Cookies
+* Cookies are small text files that are stored on the user's device
+* session management. 
+* Authentication and personalization theams
+
+
+## Caching in Route handlers
+
+
+
+
+
+
+
+
+
 
 
 
