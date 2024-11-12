@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 
 export async function GET(request: NextRequest) {
   // Retrieve headers using the headers function
-  const headersList = headers();
+  const headersList = await headers();
   
   // Log the Authorization header from the headers list
   console.log(headersList.get("Authorization")); // Corrected syntax here
