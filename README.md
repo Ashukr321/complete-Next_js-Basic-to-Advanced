@@ -41,6 +41,18 @@
 32. Dynamic Routes Route handler
 33. Patch Request Route handler
 34. Delete Request Route handler
+35. URL query parameters
+36. Redirect in Routes Handler 
+37. Header in Routes Handler 
+38. Cookies in Routes Handler
+39. Caching in Route handlers
+40. Middleware in the next js 
+
+## 
+41. Rendering in next js 
+
+
+
 
 
 
@@ -329,6 +341,74 @@ Parallel routes are an advanced routing mechanism that allows for the simultaneo
 * it helpFull to making external api requests
 * to create routes handler we have to follow 
 * route.ts
+
+
+## headers in Route Handler
+* headers represent the metadata associated with an api  request and response
+* two types 
+### Request header 
+* Request header are send by the client such as web browser
+* This contains essential information about request example : Authorization, user agent ,Accept
+
+### Response header
+* these are send back from the server to the client 
+## Cookies
+* Cookies are small text files that are stored on the user's device
+* session management. 
+* Authentication and personalization theams
+
+
+## Caching in Route handlers
+* Caching is an optimization technique that improves the performance of web applications by reducing the number of requests made to the server.
+* Route handler are cached by default when  using the get request method with the  Response object
+
+## Middleware in the next js
+* Middleware are functions that run before a request is handled by a route handler or a page.
+* Middleware are used for a variety of purposes
+* Authentication and authorization
+* Data validation
+* Logging and monitoring
+* Caching and rate limiting
+* Error handling and logging
+* Middleware are executed in the order they are defined in the middleware.ts file.
+* To create middleware we have to create a middleware.ts file in the src folder;
+* middleware allow us to specify path where it will be active 
+> 
+    1. Custom matcher config 
+    2. Conditional statement 
+
+
+
+
+
+## Rendering in next js
+Rendering is the process of  transforming your code that you write in to the user interface 
+
+* Next js provide two types of rendering
+* Server side rendering
+* Client side rendering
+
+
+## CSR (client side rendering)
+* transforming the code directly into the web browser( the client ) know as client side rendering
+* not best for the seo 
+* performance issues  all the work is handle by the web browser
+* Each feature added is increase the javascript bundle size 
+
+## SSR (server side rendering)
+* this is further classified into two part 
+* ssg ( static site generation);
+* ssr ( server side rendering)
+
+### ssg ( static site generation)
+* this is the process of generating the html code at the build time
+* this result is already rendered and ready for serving 
+
+### ssr ( server side rendering)
+* this is the process of generating the html code at the run time on demand 
+* this is the best for the seo
+
+
 
 
 
