@@ -50,6 +50,13 @@
 
 ## 
 41. Rendering in next js 
+42. server components 
+43. Client components
+44. Rsc Rendering life 
+45. server rendering strategies 
+46. static rendering strategies
+
+
 
 
 
@@ -407,6 +414,16 @@ Rendering is the process of  transforming your code that you write in to the use
 ### ssr ( server side rendering)
 * this is the process of generating the html code at the run time on demand 
 * this is the best for the seo
+
+
+## server component
+* server component are the component that are rendered on the server
+* by default all the component are server component
+
+## Client component
+* client component are the component that are rendered on the client
+* to create client component we have to add "use client" at the top of the component
+
 
 
 
