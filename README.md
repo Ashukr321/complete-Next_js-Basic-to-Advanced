@@ -57,6 +57,20 @@
 46. static rendering strategies
 
 
+# Next js 15 version 
+* Next js 15 based on react 19 version 
+
+## List of new Features in Next js 
+* No Caching
+* Create next app ( update design ) and flag to enable turbo pack in local development
+* Partial Pre Rendering( experimental )
+* create next app update 
+
+## create next app update 
+* New look and feel 
+*  New prompt asking for enable turbo pack in local development default no 
+* can be use like this npx create-next-app@rc -turbo
+
 
 
 
