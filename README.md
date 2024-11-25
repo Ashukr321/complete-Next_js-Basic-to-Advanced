@@ -57,6 +57,8 @@
 46. static rendering strategies
 
 
+
+
 # Next js 15 version 
 * Next js 15 based on react 19 version 
 
@@ -70,6 +72,62 @@
 * New look and feel 
 *  New prompt asking for enable turbo pack in local development default no 
 * can be use like this npx create-next-app@rc -turbo
+* create new Project without extra code npx create-next-app@rc --empty
+
+## to update existing project to next js 15 version
+
+    npm install next@rc react@rc react-dom@rc
+
+## to install compiler 
+    npm install babel-plugin-react-compiler
+
+>
+    /** @type {import('next').NextConfig} */
+    const nextConfig = {
+      experimental:{
+        reactCompiler:true,
+      }
+    };
+
+    export default nextConfig;
+
+
+## next/after 
+* To enable next/after we have to do some connfiguration
+
+> 
+    /** @type {import('next').NextConfig} */
+    const nextConfig = {
+      experimental:{
+        reactCompiler:true,
+        after:true
+      }
+    };
+
+    export default nextConfig;
+
+
+>
+    import { unstable_after as after } from "next/server";
+    export default function Home() {
+      after(() => {
+        console.log("this is after ")
+      })
+      return (
+        <div>
+          <h1 className="text-center text-4xl text-black" >next js 15</h1>
+
+        </div>
+      );
+    }
+
+
+
+## upgrade next js old version to next js 15 version
+
+    npx @next/codemod@canary upgrade rc
+
+* this  single command will upgrade all related  dependencies
 
 
 
