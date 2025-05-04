@@ -20,7 +20,9 @@
 11. Catch all Segment 
 12. Not Found Page
 13. File Co_location
-14. Private folder 
+
+
+14. Private folder  
 15. Routes Group
 16. layout
 17. Nested layout 
