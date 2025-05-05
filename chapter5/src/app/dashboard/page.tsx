@@ -3,7 +3,17 @@ import React from "react";
 export const metadata = {
   title: "this is the dashboard",
 };
+
+function getRandomInt (count:number){
+  return Math.floor(Math.random()*count);
+}
+
 const page = async () => {
+  const random = getRandomInt(2);
+  if(random===1){
+    throw new Error("error loading dashboard !")
+  }
+
   await new Promise(resolve => {
     setTimeout(() => {
       resolve("adf");
