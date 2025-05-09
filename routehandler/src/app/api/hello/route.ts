@@ -9,9 +9,9 @@ const users = [
 
 export async function GET(req: NextRequest) {
   //nextUrl this parse whole request
-  const headerList =await headers(); // header is the async function so we need to await
+  const headerList = await headers(); // header is the async function so we need to await
   console.log(headerList.get("Authorization"));
- 
+
   const searchParams = req.nextUrl.searchParams;
   const query = searchParams.get("query");
   if (!query) {

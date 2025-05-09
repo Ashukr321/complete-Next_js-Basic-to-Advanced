@@ -15,4 +15,5 @@
 /chapter7/.next
 /chapter2/.next
 /chapter3/.next
-
+/cookies/node_modules
+/cookies/*next
